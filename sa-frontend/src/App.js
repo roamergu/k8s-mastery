@@ -20,8 +20,9 @@ class App extends Component {
     };
 
     analyzeSentence() {
-        fetch('http://localhost:8080/sentiment', {
-            method: 'POST',
+       var tempUrl = window.location.protocol + "//" + window.location.host+":8080/sentiment";
+
+        fetch(tempUrl, 
             headers: {
                 'Content-Type': 'application/json'
             },
